@@ -454,7 +454,7 @@ RCT_EXPORT_METHOD(write:(NSString *)deviceUUID serviceUUID:(NSString*)serviceUUI
 
 //        RCTLogInfo(@"Message to write(%lu): %@ ", (unsigned long)[dataMessage length], [dataMessage hexadecimalString]);
         
-        [peripheral writeValue:[self hexToBytes:@"acaca1000300ff5b"] forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+        [peripheral writeValue:[self hexToBytes: message] forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
 //        if ([dataMessage length] > maxByteSize){
 //            int dataLength = (int)dataMessage.length;
 //            int count = 0;
